@@ -1,0 +1,120 @@
+{
+ "version": 7,
+ "name": "access_module",
+ "lang": "vhdl",
+ "sheet": {
+  "w": 1700,
+  "h": 1100
+ },
+ "symbols": [
+  {
+   "id": "S1",
+   "type": "and2",
+   "x": 240,
+   "y": 120,
+   "rot": 0,
+   "mirror": false,
+   "name": "inst_1",
+   "params": {
+    "width": 1,
+    "bits": false
+   }
+  }
+ ],
+ "wires": [
+  {
+   "id": "W1",
+   "points": [
+    {
+     "x": 170,
+     "y": 190
+    },
+    {
+     "x": 190,
+     "y": 190
+    },
+    {
+     "x": 190,
+     "y": 150
+    },
+    {
+     "x": 240,
+     "y": 150
+    }
+   ]
+  },
+  {
+   "id": "W2",
+   "points": [
+    {
+     "x": 170,
+     "y": 130
+    },
+    {
+     "x": 240,
+     "y": 130
+    }
+   ]
+  },
+  {
+   "id": "W3",
+   "points": [
+    {
+     "x": 320,
+     "y": 140
+    },
+    {
+     "x": 390,
+     "y": 140
+    }
+   ]
+  }
+ ],
+ "labels": [],
+ "ports": [
+  {
+   "id": "P1",
+   "name": "rst",
+   "dir": "in",
+   "width": 1,
+   "x": 150,
+   "y": 70,
+   "type": "STD_LOGIC"
+  },
+  {
+   "id": "P2",
+   "name": "code_in",
+   "dir": "in",
+   "width": 1,
+   "x": 170,
+   "y": 190,
+   "type": "STD_LOGIC"
+  },
+  {
+   "id": "P3",
+   "name": "bit_ready",
+   "dir": "in",
+   "width": 1,
+   "x": 170,
+   "y": 130,
+   "type": "STD_LOGIC"
+  },
+  {
+   "id": "P4",
+   "name": "code_ok",
+   "dir": "out",
+   "width": 1,
+   "x": 390,
+   "y": 140,
+   "type": "STD_LOGIC"
+  }
+ ],
+ "hdl": {
+  "lang": "vhdl",
+  "context": "library IEEE;\nuse IEEE.STD_LOGIC_1164.ALL;",
+  "generics": [],
+  "decls": "--CRIAR AQUI OS SINAIS DE ENTRADA E DE SAÍDA DOS FLIP-FLOPS\n--para criar os sinais de entrada e de saída de um flip-flop, pode-se usar um código semelhante ao seguinte\n--signal Dx, Qx : std_logic := '0';",
+  "arch": "Behavioral"
+ },
+ "generatedFile": "access_module.vhd"
+}

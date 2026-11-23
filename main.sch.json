@@ -1,0 +1,1592 @@
+{
+ "version": 7,
+ "name": "main",
+ "lang": "vhdl",
+ "sheet": {
+  "w": 1910,
+  "h": 1100
+ },
+ "symbols": [
+  {
+   "id": "S1",
+   "type": "hdlblock",
+   "x": 240,
+   "y": 240,
+   "rot": 0,
+   "mirror": false,
+   "name": "LOGIC_1",
+   "params": {
+    "inputs": [
+     {
+      "name": "clk",
+      "width": 1
+     },
+     {
+      "name": "bit_ready",
+      "width": 1
+     }
+    ],
+    "outputs": [
+     {
+      "name": "s_bit_ready",
+      "width": 1
+     }
+    ],
+    "title": "assign",
+    "kind": "logic"
+   },
+   "hdl": "s_bit_ready <= bit_ready when rising_edge(clk);"
+  },
+  {
+   "id": "S2",
+   "type": "module",
+   "x": 500,
+   "y": 180,
+   "rot": 0,
+   "mirror": false,
+   "name": "Inst_access_module",
+   "params": {
+    "module": "access_module",
+    "generics": {},
+    "ports": [
+     {
+      "name": "rst",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "code_in",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "bit_ready",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "code_ok",
+      "dir": "out",
+      "width": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "S3",
+   "type": "module",
+   "x": 770,
+   "y": 140,
+   "rot": 0,
+   "mirror": false,
+   "name": "Inst_control",
+   "params": {
+    "module": "control",
+    "generics": {},
+    "ports": [
+     {
+      "name": "clk",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "rst",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "code_ok",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "exec",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "oper",
+      "dir": "in",
+      "width": 3
+     },
+     {
+      "name": "arith",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "clear_c",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "load_c",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "copy_c",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "sel_copy_of_c",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "rst_counter",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "inc_counter",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "equal",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "ready",
+      "dir": "out",
+      "width": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "S4",
+   "type": "module",
+   "x": 1040,
+   "y": 120,
+   "rot": 0,
+   "mirror": false,
+   "name": "Inst_data",
+   "params": {
+    "module": "data",
+    "generics": {},
+    "ports": [
+     {
+      "name": "clk",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "arith",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "clear_c",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "load_c",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "copy_c",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "sel_copy_of_c",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "rst_counter",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "inc_counter",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "equal",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "a",
+      "dir": "in",
+      "width": 4
+     },
+     {
+      "name": "c",
+      "dir": "out",
+      "width": 8
+     }
+    ]
+   }
+  },
+  {
+   "id": "S5",
+   "type": "buf",
+   "x": 1290,
+   "y": 60,
+   "rot": 0,
+   "mirror": false,
+   "name": "inst_1",
+   "params": {
+    "width": 8,
+    "bits": false
+   }
+  },
+  {
+   "id": "S6",
+   "type": "busjoin",
+   "x": 1060,
+   "y": 380,
+   "rot": 0,
+   "mirror": false,
+   "name": "inst_2",
+   "params": {
+    "widths": "1,1,1,1"
+   }
+  },
+  {
+   "id": "S7",
+   "type": "constant",
+   "x": 920,
+   "y": 380,
+   "rot": 0,
+   "mirror": false,
+   "name": "inst_3",
+   "params": {
+    "value": "0",
+    "width": 1
+   }
+  },
+  {
+   "id": "S8",
+   "type": "constant",
+   "x": 920,
+   "y": 440,
+   "rot": 0,
+   "mirror": false,
+   "name": "inst_4",
+   "params": {
+    "value": "0",
+    "width": 1
+   }
+  },
+  {
+   "id": "S9",
+   "type": "module",
+   "x": 1440,
+   "y": 310,
+   "rot": 0,
+   "mirror": false,
+   "name": "Inst_disp_basys2SL",
+   "params": {
+    "module": "disp_basys2sl",
+    "generics": {},
+    "ports": [
+     {
+      "name": "clk",
+      "dir": "in",
+      "width": 1
+     },
+     {
+      "name": "dig3",
+      "dir": "in",
+      "width": 4
+     },
+     {
+      "name": "dig2",
+      "dir": "in",
+      "width": 4
+     },
+     {
+      "name": "dig1",
+      "dir": "in",
+      "width": 4
+     },
+     {
+      "name": "dig0",
+      "dir": "in",
+      "width": 4
+     },
+     {
+      "name": "sega",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "segb",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "segc",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "segd",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "sege",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "segf",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "segg",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "segp",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "an3",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "an2",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "an1",
+      "dir": "out",
+      "width": 1
+     },
+     {
+      "name": "an0",
+      "dir": "out",
+      "width": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "S10",
+   "type": "slice",
+   "x": 1310,
+   "y": 160,
+   "rot": 0,
+   "mirror": false,
+   "name": "inst_5",
+   "params": {
+    "msb": 7,
+    "lsb": 4
+   }
+  },
+  {
+   "id": "S11",
+   "type": "slice",
+   "x": 1310,
+   "y": 360,
+   "rot": 0,
+   "mirror": false,
+   "name": "inst_6",
+   "params": {
+    "msb": 3,
+    "lsb": 0
+   }
+  }
+ ],
+ "wires": [
+  {
+   "id": "W1",
+   "points": [
+    {
+     "x": 170,
+     "y": 100
+    },
+    {
+     "x": 190,
+     "y": 100
+    }
+   ]
+  },
+  {
+   "id": "W2",
+   "points": [
+    {
+     "x": 190,
+     "y": 100
+    },
+    {
+     "x": 710,
+     "y": 100
+    }
+   ]
+  },
+  {
+   "id": "W3",
+   "points": [
+    {
+     "x": 190,
+     "y": 100
+    },
+    {
+     "x": 190,
+     "y": 260
+    },
+    {
+     "x": 240,
+     "y": 260
+    }
+   ]
+  },
+  {
+   "id": "W4",
+   "points": [
+    {
+     "x": 710,
+     "y": 100
+    },
+    {
+     "x": 980,
+     "y": 100
+    }
+   ]
+  },
+  {
+   "id": "W5",
+   "points": [
+    {
+     "x": 710,
+     "y": 100
+    },
+    {
+     "x": 710,
+     "y": 160
+    },
+    {
+     "x": 770,
+     "y": 160
+    }
+   ]
+  },
+  {
+   "id": "W6",
+   "points": [
+    {
+     "x": 980,
+     "y": 100
+    },
+    {
+     "x": 1410,
+     "y": 100
+    },
+    {
+     "x": 1410,
+     "y": 330
+    },
+    {
+     "x": 1440,
+     "y": 330
+    }
+   ]
+  },
+  {
+   "id": "W7",
+   "points": [
+    {
+     "x": 980,
+     "y": 100
+    },
+    {
+     "x": 980,
+     "y": 140
+    },
+    {
+     "x": 1040,
+     "y": 140
+    }
+   ]
+  },
+  {
+   "id": "W8",
+   "points": [
+    {
+     "x": 170,
+     "y": 160
+    },
+    {
+     "x": 450,
+     "y": 160
+    }
+   ]
+  },
+  {
+   "id": "W9",
+   "points": [
+    {
+     "x": 450,
+     "y": 160
+    },
+    {
+     "x": 690,
+     "y": 160
+    },
+    {
+     "x": 690,
+     "y": 180
+    },
+    {
+     "x": 770,
+     "y": 180
+    }
+   ]
+  },
+  {
+   "id": "W10",
+   "points": [
+    {
+     "x": 450,
+     "y": 160
+    },
+    {
+     "x": 450,
+     "y": 200
+    },
+    {
+     "x": 500,
+     "y": 200
+    }
+   ]
+  },
+  {
+   "id": "W11",
+   "points": [
+    {
+     "x": 170,
+     "y": 220
+    },
+    {
+     "x": 500,
+     "y": 220
+    }
+   ]
+  },
+  {
+   "id": "W12",
+   "points": [
+    {
+     "x": 170,
+     "y": 280
+    },
+    {
+     "x": 240,
+     "y": 280
+    }
+   ]
+  },
+  {
+   "id": "W13",
+   "points": [
+    {
+     "x": 170,
+     "y": 340
+    },
+    {
+     "x": 690,
+     "y": 340
+    },
+    {
+     "x": 690,
+     "y": 220
+    },
+    {
+     "x": 770,
+     "y": 220
+    }
+   ]
+  },
+  {
+   "id": "W14",
+   "points": [
+    {
+     "x": 170,
+     "y": 400
+    },
+    {
+     "x": 710,
+     "y": 400
+    },
+    {
+     "x": 710,
+     "y": 240
+    },
+    {
+     "x": 770,
+     "y": 240
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W15",
+   "points": [
+    {
+     "x": 170,
+     "y": 460
+    },
+    {
+     "x": 750,
+     "y": 460
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W16",
+   "points": [
+    {
+     "x": 750,
+     "y": 460
+    },
+    {
+     "x": 750,
+     "y": 340
+    },
+    {
+     "x": 1020,
+     "y": 340
+    },
+    {
+     "x": 1020,
+     "y": 300
+    },
+    {
+     "x": 1040,
+     "y": 300
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W17",
+   "points": [
+    {
+     "x": 750,
+     "y": 460
+    },
+    {
+     "x": 750,
+     "y": 480
+    },
+    {
+     "x": 1410,
+     "y": 480
+    },
+    {
+     "x": 1410,
+     "y": 410
+    },
+    {
+     "x": 1440,
+     "y": 410
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W18",
+   "points": [
+    {
+     "x": 1370,
+     "y": 70
+    },
+    {
+     "x": 1730,
+     "y": 70
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W19",
+   "points": [
+    {
+     "x": 1590,
+     "y": 330
+    },
+    {
+     "x": 1610,
+     "y": 330
+    },
+    {
+     "x": 1610,
+     "y": 130
+    },
+    {
+     "x": 1730,
+     "y": 130
+    }
+   ]
+  },
+  {
+   "id": "W20",
+   "points": [
+    {
+     "x": 1590,
+     "y": 350
+    },
+    {
+     "x": 1630,
+     "y": 350
+    },
+    {
+     "x": 1630,
+     "y": 190
+    },
+    {
+     "x": 1730,
+     "y": 190
+    }
+   ]
+  },
+  {
+   "id": "W21",
+   "points": [
+    {
+     "x": 1590,
+     "y": 370
+    },
+    {
+     "x": 1650,
+     "y": 370
+    },
+    {
+     "x": 1650,
+     "y": 250
+    },
+    {
+     "x": 1730,
+     "y": 250
+    }
+   ]
+  },
+  {
+   "id": "W22",
+   "points": [
+    {
+     "x": 1590,
+     "y": 390
+    },
+    {
+     "x": 1670,
+     "y": 390
+    },
+    {
+     "x": 1670,
+     "y": 310
+    },
+    {
+     "x": 1730,
+     "y": 310
+    }
+   ]
+  },
+  {
+   "id": "W23",
+   "points": [
+    {
+     "x": 1590,
+     "y": 410
+    },
+    {
+     "x": 1690,
+     "y": 410
+    },
+    {
+     "x": 1690,
+     "y": 370
+    },
+    {
+     "x": 1730,
+     "y": 370
+    }
+   ]
+  },
+  {
+   "id": "W24",
+   "points": [
+    {
+     "x": 1590,
+     "y": 430
+    },
+    {
+     "x": 1730,
+     "y": 430
+    }
+   ]
+  },
+  {
+   "id": "W25",
+   "points": [
+    {
+     "x": 1590,
+     "y": 450
+    },
+    {
+     "x": 1710,
+     "y": 450
+    },
+    {
+     "x": 1710,
+     "y": 490
+    },
+    {
+     "x": 1730,
+     "y": 490
+    }
+   ]
+  },
+  {
+   "id": "W26",
+   "points": [
+    {
+     "x": 1590,
+     "y": 470
+    },
+    {
+     "x": 1690,
+     "y": 470
+    },
+    {
+     "x": 1690,
+     "y": 550
+    },
+    {
+     "x": 1730,
+     "y": 550
+    }
+   ]
+  },
+  {
+   "id": "W27",
+   "points": [
+    {
+     "x": 1590,
+     "y": 490
+    },
+    {
+     "x": 1670,
+     "y": 490
+    },
+    {
+     "x": 1670,
+     "y": 610
+    },
+    {
+     "x": 1730,
+     "y": 610
+    }
+   ]
+  },
+  {
+   "id": "W28",
+   "points": [
+    {
+     "x": 1590,
+     "y": 510
+    },
+    {
+     "x": 1650,
+     "y": 510
+    },
+    {
+     "x": 1650,
+     "y": 670
+    },
+    {
+     "x": 1730,
+     "y": 670
+    }
+   ]
+  },
+  {
+   "id": "W29",
+   "points": [
+    {
+     "x": 1590,
+     "y": 530
+    },
+    {
+     "x": 1630,
+     "y": 530
+    },
+    {
+     "x": 1630,
+     "y": 730
+    },
+    {
+     "x": 1730,
+     "y": 730
+    }
+   ]
+  },
+  {
+   "id": "W30",
+   "points": [
+    {
+     "x": 1590,
+     "y": 550
+    },
+    {
+     "x": 1610,
+     "y": 550
+    },
+    {
+     "x": 1610,
+     "y": 790
+    },
+    {
+     "x": 1730,
+     "y": 790
+    }
+   ]
+  },
+  {
+   "id": "W31",
+   "points": [
+    {
+     "x": 430,
+     "y": 260
+    },
+    {
+     "x": 450,
+     "y": 260
+    },
+    {
+     "x": 450,
+     "y": 240
+    },
+    {
+     "x": 500,
+     "y": 240
+    }
+   ]
+  },
+  {
+   "id": "W32",
+   "points": [
+    {
+     "x": 670,
+     "y": 200
+    },
+    {
+     "x": 770,
+     "y": 200
+    }
+   ]
+  },
+  {
+   "id": "W33",
+   "points": [
+    {
+     "x": 960,
+     "y": 160
+    },
+    {
+     "x": 1040,
+     "y": 160
+    }
+   ]
+  },
+  {
+   "id": "W34",
+   "points": [
+    {
+     "x": 960,
+     "y": 180
+    },
+    {
+     "x": 1040,
+     "y": 180
+    }
+   ]
+  },
+  {
+   "id": "W35",
+   "points": [
+    {
+     "x": 960,
+     "y": 200
+    },
+    {
+     "x": 1040,
+     "y": 200
+    }
+   ]
+  },
+  {
+   "id": "W36",
+   "points": [
+    {
+     "x": 960,
+     "y": 220
+    },
+    {
+     "x": 1040,
+     "y": 220
+    }
+   ]
+  },
+  {
+   "id": "W37",
+   "points": [
+    {
+     "x": 960,
+     "y": 240
+    },
+    {
+     "x": 1040,
+     "y": 240
+    }
+   ]
+  },
+  {
+   "id": "W38",
+   "points": [
+    {
+     "x": 960,
+     "y": 260
+    },
+    {
+     "x": 1040,
+     "y": 260
+    }
+   ]
+  },
+  {
+   "id": "W39",
+   "points": [
+    {
+     "x": 960,
+     "y": 280
+    },
+    {
+     "x": 1040,
+     "y": 280
+    }
+   ]
+  },
+  {
+   "id": "W40",
+   "points": [
+    {
+     "x": 1220,
+     "y": 140
+    },
+    {
+     "x": 1240,
+     "y": 140
+    },
+    {
+     "x": 1240,
+     "y": 360
+    },
+    {
+     "x": 730,
+     "y": 360
+    },
+    {
+     "x": 730,
+     "y": 260
+    },
+    {
+     "x": 770,
+     "y": 260
+    }
+   ]
+  },
+  {
+   "id": "W41",
+   "points": [
+    {
+     "x": 960,
+     "y": 300
+    },
+    {
+     "x": 1000,
+     "y": 300
+    },
+    {
+     "x": 1000,
+     "y": 390
+    }
+   ]
+  },
+  {
+   "id": "W42",
+   "points": [
+    {
+     "x": 1000,
+     "y": 390
+    },
+    {
+     "x": 1060,
+     "y": 390
+    }
+   ]
+  },
+  {
+   "id": "W43",
+   "points": [
+    {
+     "x": 1000,
+     "y": 390
+    },
+    {
+     "x": 1000,
+     "y": 430
+    },
+    {
+     "x": 1060,
+     "y": 430
+    }
+   ]
+  },
+  {
+   "id": "W44",
+   "points": [
+    {
+     "x": 1220,
+     "y": 160
+    },
+    {
+     "x": 1260,
+     "y": 160
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W45",
+   "points": [
+    {
+     "x": 1260,
+     "y": 160
+    },
+    {
+     "x": 1310,
+     "y": 160
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W46",
+   "points": [
+    {
+     "x": 1260,
+     "y": 160
+    },
+    {
+     "x": 1260,
+     "y": 70
+    },
+    {
+     "x": 1290,
+     "y": 70
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W47",
+   "points": [
+    {
+     "x": 1260,
+     "y": 160
+    },
+    {
+     "x": 1260,
+     "y": 360
+    },
+    {
+     "x": 1310,
+     "y": 360
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W48",
+   "points": [
+    {
+     "x": 960,
+     "y": 390
+    },
+    {
+     "x": 980,
+     "y": 390
+    },
+    {
+     "x": 980,
+     "y": 410
+    },
+    {
+     "x": 1060,
+     "y": 410
+    }
+   ]
+  },
+  {
+   "id": "W49",
+   "points": [
+    {
+     "x": 960,
+     "y": 450
+    },
+    {
+     "x": 1060,
+     "y": 450
+    }
+   ]
+  },
+  {
+   "id": "W50",
+   "points": [
+    {
+     "x": 1120,
+     "y": 420
+    },
+    {
+     "x": 1390,
+     "y": 420
+    },
+    {
+     "x": 1390,
+     "y": 390
+    },
+    {
+     "x": 1440,
+     "y": 390
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W51",
+   "points": [
+    {
+     "x": 1350,
+     "y": 170
+    },
+    {
+     "x": 1390,
+     "y": 170
+    },
+    {
+     "x": 1390,
+     "y": 350
+    },
+    {
+     "x": 1440,
+     "y": 350
+    }
+   ],
+   "bus": true
+  },
+  {
+   "id": "W52",
+   "points": [
+    {
+     "x": 1350,
+     "y": 370
+    },
+    {
+     "x": 1440,
+     "y": 370
+    }
+   ],
+   "bus": true
+  }
+ ],
+ "labels": [
+  {
+   "id": "L1",
+   "x": 450,
+   "y": 260,
+   "net": "s_bit_ready"
+  },
+  {
+   "id": "L2",
+   "x": 690,
+   "y": 200,
+   "net": "s_code_ok"
+  },
+  {
+   "id": "L3",
+   "x": 980,
+   "y": 160,
+   "net": "s_arith"
+  },
+  {
+   "id": "L4",
+   "x": 980,
+   "y": 180,
+   "net": "s_clear_c"
+  },
+  {
+   "id": "L5",
+   "x": 980,
+   "y": 200,
+   "net": "s_load_c"
+  },
+  {
+   "id": "L6",
+   "x": 980,
+   "y": 220,
+   "net": "s_copy_c"
+  },
+  {
+   "id": "L7",
+   "x": 980,
+   "y": 240,
+   "net": "s_sel_copy_of_C"
+  },
+  {
+   "id": "L8",
+   "x": 980,
+   "y": 260,
+   "net": "s_rst_counter"
+  },
+  {
+   "id": "L9",
+   "x": 980,
+   "y": 280,
+   "net": "s_inc_counter"
+  },
+  {
+   "id": "L10",
+   "x": 1240,
+   "y": 140,
+   "net": "s_equal"
+  },
+  {
+   "id": "L11",
+   "x": 980,
+   "y": 300,
+   "net": "s_ready"
+  },
+  {
+   "id": "L12",
+   "x": 1250,
+   "y": 160,
+   "net": "s_C"
+  },
+  {
+   "id": "L13",
+   "x": 1140,
+   "y": 420,
+   "net": "s_ready_disp"
+  }
+ ],
+ "ports": [
+  {
+   "id": "P1",
+   "name": "clk",
+   "dir": "in",
+   "width": 1,
+   "x": 170,
+   "y": 100,
+   "type": "std_logic"
+  },
+  {
+   "id": "P2",
+   "name": "rst",
+   "dir": "in",
+   "width": 1,
+   "x": 170,
+   "y": 160,
+   "type": "std_logic"
+  },
+  {
+   "id": "P3",
+   "name": "code_in",
+   "dir": "in",
+   "width": 1,
+   "x": 170,
+   "y": 220,
+   "type": "std_logic"
+  },
+  {
+   "id": "P4",
+   "name": "bit_ready",
+   "dir": "in",
+   "width": 1,
+   "x": 170,
+   "y": 280,
+   "type": "std_logic"
+  },
+  {
+   "id": "P5",
+   "name": "exec",
+   "dir": "in",
+   "width": 1,
+   "x": 170,
+   "y": 340,
+   "type": "std_logic"
+  },
+  {
+   "id": "P6",
+   "name": "oper",
+   "dir": "in",
+   "width": 3,
+   "x": 170,
+   "y": 400,
+   "type": "std_logic_vector(2 downto 0)"
+  },
+  {
+   "id": "P7",
+   "name": "A",
+   "dir": "in",
+   "width": 4,
+   "x": 170,
+   "y": 460,
+   "type": "std_logic_vector(3 downto 0)"
+  },
+  {
+   "id": "P8",
+   "name": "C",
+   "dir": "out",
+   "width": 8,
+   "x": 1730,
+   "y": 70,
+   "type": "std_logic_vector(7 downto 0)"
+  },
+  {
+   "id": "P9",
+   "name": "ca",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 130,
+   "type": "std_logic"
+  },
+  {
+   "id": "P10",
+   "name": "cb",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 190,
+   "type": "std_logic"
+  },
+  {
+   "id": "P11",
+   "name": "cc",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 250,
+   "type": "std_logic"
+  },
+  {
+   "id": "P12",
+   "name": "cd",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 310,
+   "type": "std_logic"
+  },
+  {
+   "id": "P13",
+   "name": "ce",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 370,
+   "type": "std_logic"
+  },
+  {
+   "id": "P14",
+   "name": "cf",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 430,
+   "type": "std_logic"
+  },
+  {
+   "id": "P15",
+   "name": "cg",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 490,
+   "type": "std_logic"
+  },
+  {
+   "id": "P16",
+   "name": "cp",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 550,
+   "type": "std_logic"
+  },
+  {
+   "id": "P17",
+   "name": "an3",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 610,
+   "type": "std_logic"
+  },
+  {
+   "id": "P18",
+   "name": "an2",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 670,
+   "type": "std_logic"
+  },
+  {
+   "id": "P19",
+   "name": "an1",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 730,
+   "type": "std_logic"
+  },
+  {
+   "id": "P20",
+   "name": "an0",
+   "dir": "out",
+   "width": 1,
+   "x": 1730,
+   "y": 790,
+   "type": "std_logic"
+  }
+ ],
+ "hdl": {
+  "lang": "vhdl",
+  "context": "library IEEE;\nuse IEEE.STD_LOGIC_1164.ALL;",
+  "generics": [],
+  "decls": "-- Top-level signals to connect control part to data part and display\nsignal s_bit_ready, s_code_ok, s_arith, s_clear_c, s_load_c, s_copy_c, s_sel_copy_of_C, s_rst_counter, s_inc_counter, s_equal, s_ready : std_logic;\nsignal s_C : std_logic_vector(7 downto 0);\nsignal s_ready_disp : std_logic_vector(3 downto 0);\n\nCOMPONENT access_module\nPORT(\n  rst : IN std_logic;\n  code_in : IN std_logic;\n  bit_ready : IN std_logic;\n  code_ok : OUT std_logic\n  );\nEND COMPONENT;\n\nCOMPONENT control\nPORT(\n  clk : IN std_logic;                      -- Clock signal\n  rst : IN std_logic;                      -- Asynchronous reset\n  code_ok : IN std_logic;\n  exec : IN std_logic;                    -- Execution control signal\n  oper : IN std_logic_vector(2 downto 0); -- Operation code\n  arith : out std_logic;                  -- Select for arithmetic operation\n  clear_c : out  std_logic;                -- Clear register s_C\n  load_c : out std_logic;                  -- Load into register s_C\n  copy_c : out std_logic;                  -- Copy C value to register copy_of_C\n  sel_copy_of_C : out std_logic;          -- Select value from copy_of_C\n  rst_counter : out std_logic;            -- Reset counter\n  inc_counter : out std_logic;            -- Increment counter\n  equal : in std_logic;                    -- Counter equal flag\n  ready : out std_logic                    -- Ready flag\n  );\nEND COMPONENT;\n\nCOMPONENT data\nPORT(\n  clk : IN std_logic;                      -- Clock signal\n  arith : in  std_logic;                  -- Select for arithmetic operation\n  clear_c : in  std_logic;                -- Clear register s_C\n  load_c : in  std_logic;                  -- Load into register s_C\n  copy_c : in  std_logic;                  -- Copy C value to register copy_of_C\n  sel_copy_of_C : in  std_logic;          -- Select value from copy_of_C\n  rst_counter : in  std_logic;            -- Reset counter\n  inc_counter : in  std_logic;            -- Increment counter\n  equal  : OUT std_logic;                  -- Counter equal flag\n  A : IN std_logic_vector(3 downto 0);    -- Value of A\n  C : OUT std_logic_vector(7 downto 0)    -- Value of C\n  );\nEND COMPONENT;\n\n-- Instantiation of disp_basys2SL (7-segment display)\nCOMPONENT disp_basys2SL\nPORT(\n  clk : IN std_logic;\n  dig3 : IN std_logic_vector(3 downto 0);\n  dig2 : IN std_logic_vector(3 downto 0);\n  dig1 : IN std_logic_vector(3 downto 0);\n  dig0 : IN std_logic_vector(3 downto 0);\n  segA : OUT std_logic;\n  segB : OUT std_logic;\n  segC : OUT std_logic;\n  segD : OUT std_logic;\n  segE : OUT std_logic;\n  segF : OUT std_logic;\n  segG : OUT std_logic;\n  segP : OUT std_logic;\n  an3 : OUT std_logic;\n  an2 : OUT std_logic;\n  an1 : OUT std_logic;\n  an0 : OUT std_logic\n  );\nEND COMPONENT;",
+  "arch": "Behavioral"
+ },
+ "generatedFile": "main.vhd"
+}

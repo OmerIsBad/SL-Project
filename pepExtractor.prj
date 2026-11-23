@@ -1,0 +1,5 @@
+work	"access_module.vhd"
+work	"control.vhd"
+work	"data.vhd"
+work	"disp_basys2_SL.vhd"
+work	"main.vhd"

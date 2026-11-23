@@ -1,0 +1,52 @@
+{
+  "name": "SL_Project_1",
+  "version": 1,
+  "device": {
+    "family": "spartan3e",
+    "part": "xc3s250e",
+    "package": "cp132",
+    "speed": "-5"
+  },
+  "board": null,
+  "top": "main",
+  "simTop": "tb01_main",
+  "files": [
+    {
+      "path": "control.vhd",
+      "lang": "vhdl",
+      "role": "design"
+    },
+    {
+      "path": "data.vhd",
+      "lang": "vhdl",
+      "role": "design"
+    },
+    {
+      "path": "disp_basys2_SL.vhd",
+      "lang": "vhdl",
+      "role": "design"
+    },
+    {
+      "path": "main.vhd",
+      "lang": "vhdl",
+      "role": "design"
+    },
+    {
+      "path": "access_module.vhd",
+      "lang": "vhdl",
+      "role": "design"
+    },
+    {
+      "path": "tb01_main.vhd",
+      "lang": "vhdl",
+      "role": "sim"
+    }
+  ],
+  "constraints": "pins.ucf",
+  "stimuli": {},
+  "impl": {
+    "optMode": "Speed",
+    "optLevel": 1,
+    "startupClk": "Cclk"
+  }
+}

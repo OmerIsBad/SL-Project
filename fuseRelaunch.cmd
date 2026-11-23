@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "/home/sl/Desktop/PROJS/SL_LEI_Trab2627/tb01_main_isim_beh.exe" -prj "/home/sl/Desktop/PROJS/SL_LEI_Trab2627/tb01_main_beh.prj" "work.tb01_main" 
