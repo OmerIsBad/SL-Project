@@ -1,0 +1,15 @@
+# Silinx (#3195): what the tools make again from the sources is not committed
+build/
+xst/
+_xmsgs/
+iseconfig/
+isim/
+.Xil/
+*.bit
+*.ncd
+*.ngc
+*.ngd
+*.xdl
+*.xdlrc
+*.wdb
+.DS_Store
